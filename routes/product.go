@@ -9,13 +9,13 @@ import (
 )
 
 type Product struct {
-	ID uint `json:"id"`
+	ID           uint   `json:"id"`
 	Name         string `json:"name"`
 	SerialNumber string `json:"serial_number"`
 }
 
 func CreateResponseProduct(productModel models.Product) Product {
-	return Product{ ID: productModel.ID, Name: productModel.Name, SerialNumber: productModel.SerialNumber}
+	return Product{ID: productModel.ID, Name: productModel.Name, SerialNumber: productModel.SerialNumber}
 }
 
 func CreateProduct(c *fiber.Ctx) error {
@@ -85,7 +85,7 @@ func UpdateProduct(c *fiber.Ctx) error {
 	}
 
 	type Product struct {
-		Name string `json:"name"`
+		Name         string `json:"name"`
 		SerialNumber string `json:"serial_number"`
 	}
 
